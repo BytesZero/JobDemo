@@ -1,4 +1,4 @@
-package com.zhengsonglan.jobdemo.AsynTask;
+package com.zhengsonglan.jobdemo.asynctask;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;

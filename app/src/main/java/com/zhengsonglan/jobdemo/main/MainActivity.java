@@ -3,7 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.zhengsonglan.jobdemo.AsynTask.AsynTaskActivity;
+import com.zhengsonglan.jobdemo.asynctask.AsynTaskActivity;
 import com.zhengsonglan.jobdemo.R;
 import com.zhengsonglan.jobdemo.base.BaseActivity;
 import com.zhengsonglan.jobdemo.base.BaseActivityInterface;

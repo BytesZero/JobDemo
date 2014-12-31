@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         //首页
-        <activity android:name=".AsynTask.AsynTaskActivity"/>
+        <activity android:name=".asynctask.AsynTaskActivity"/>
 
 
     </application>

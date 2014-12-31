@@ -1,4 +1,4 @@
-package com.zhengsonglan.jobdemo.AsynTask;
+package com.zhengsonglan.jobdemo.asynctask;
 
 import android.os.Bundle;
 import android.view.View;
