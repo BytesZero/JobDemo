@@ -2,8 +2,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SyncTask的使用"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="异步加载图片"
+            android:id="@+id/asyntask_bt"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -11,10 +31,5 @@
         android:id="@+id/asyntask_imageview"
         android:src="@drawable/ic_launcher" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="加载图片"
-        android:id="@+id/asyntask_bt"
-        android:layout_gravity="bottom" />
+
 </LinearLayout>

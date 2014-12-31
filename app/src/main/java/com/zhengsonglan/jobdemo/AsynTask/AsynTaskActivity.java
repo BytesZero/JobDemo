@@ -16,11 +16,14 @@ public class AsynTaskActivity extends BaseActivity implements BaseActivityInterf
 
     private ImageView imageView;
     private Button bt_iv;
-    private String url="http://image.baidu.com/i?ct=503316480&z=&tn=baiduimagedetail&ipn=d&word=%E5%BC%82%E6%AD%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87&step_word=&ie=utf-8&in=4663&cl=&lm=&st=&cs=1448543225,1088825859&os=2112771832,482562585&pn=24&rn=1&di=98160235910&ln=1978&fr=&&fmq=1419935676206_R&ic=&s=&se=&sme=0&tab=&width=&height=&face=&is=&istype=&ist=&jit=&objurl=http%3A%2F%2Fres.co188.com%2Fdata%2Fdrawing%2Fimg640%2F1550883351750.jpg&adpicid=0";
+    private String url="http://g.hiphotos.baidu.com/image/w%3D310/sign=7725d8ccd3a20cf44690f8de46084b0c/e1fe9925bc315c601a0f34a48eb1cb13485477e6.jpg";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asyntask);
+        initView();
+        initEvent();
+        initData();
     }
 
     @Override
@@ -34,6 +37,9 @@ public class AsynTaskActivity extends BaseActivity implements BaseActivityInterf
         bt_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * 执行Execute方法
+                 */
                 MyAsynTask myAsynTask=new MyAsynTask(imageView);
                 myAsynTask.execute(url);
             }

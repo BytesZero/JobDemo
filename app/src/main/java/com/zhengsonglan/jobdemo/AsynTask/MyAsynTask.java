@@ -2,50 +2,52 @@ package com.zhengsonglan.jobdemo.AsynTask;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.widget.ImageView;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
  * Created by zsl on 2014/12/30.
  */
 public class MyAsynTask extends AsyncTask<String, Void, Bitmap> {
 
-    private final WeakReference<ImageView> bitmapWeakReference;
+    ImageView imageView;
 
     public MyAsynTask(ImageView imageView) {
-        bitmapWeakReference = new WeakReference<ImageView>(imageView);
+        this.imageView = imageView;
     }
 
     @Override
     protected void onPostExecute(Bitmap bitmap) {
-        if (bitmapWeakReference!=null){
-            ImageView imageView=bitmapWeakReference.get();
-            if (imageView!=null){
-                imageView.setImageBitmap(bitmap);
-            }
-        }
+        imageView.setImageBitmap(bitmap);
     }
 
     @Override
     protected Bitmap doInBackground(String... params) {
-        HttpGet httpGet = new HttpGet(params[0]);
-        AndroidHttpClient httpClient = AndroidHttpClient.newInstance("android");
+        String img_url = params[0];
+        return BitmapFactory.decodeStream(DownLoadImage(img_url));
+    }
+
+    /**
+     * 下载图片
+     * @param img_url
+     * @return
+     */
+    private InputStream DownLoadImage(String img_url) {
         try {
-            HttpResponse httpResponse = httpClient.execute(httpGet);
-            InputStream inputStream = httpResponse.getEntity().getContent();
-            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-            return bitmap;
-
-
-
+            URL url = new URL(img_url);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(15000);
+            connection.setReadTimeout(10000);
+            connection.setRequestMethod("GET");
+            connection.setDoInput(true);
+            connection.connect();
+            return connection.getInputStream();
         } catch (IOException e) {
             e.printStackTrace();
         }
