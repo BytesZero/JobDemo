@@ -11,6 +11,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        //首页
         <activity
             android:name=".main.MainActivity"
             android:label="@string/app_name" >
@@ -20,9 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        //首页
+        //AsyncTask
         <activity android:name=".asynctask.AsynTaskActivity"/>
-
+        //Handler
+        <activity android:name=".handler.HandlerActivity"/>
 
     </application>
 
