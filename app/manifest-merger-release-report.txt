@@ -14,9 +14,9 @@ ADDED from AndroidManifest.xml:2:1
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 uses-permission#android.permission.INTERNET
-ADDED from AndroidManifest.xml:6:5
+ADDED from AndroidManifest.xml:7:5
 	android:name
-		ADDED from AndroidManifest.xml:6:22
+		ADDED from AndroidManifest.xml:7:22
 application
 ADDED from AndroidManifest.xml:9:5
 MERGED from com.android.support:appcompat-v7:21.0.0:16:5
@@ -53,6 +53,40 @@ activity#com.zhengsonglan.jobdemo.handler.HandlerActivity
 ADDED from AndroidManifest.xml:27:9
 	android:name
 		ADDED from AndroidManifest.xml:27:19
+activity#com.zhengsonglan.jobdemo.apps.start.AppsStartActivity
+ADDED from AndroidManifest.xml:29:9
+	android:name
+		ADDED from AndroidManifest.xml:29:19
+activity#com.zhengsonglan.jobdemo.apps.share.ShareActivity
+ADDED from AndroidManifest.xml:31:9
+	android:name
+		ADDED from AndroidManifest.xml:31:19
+receiver#com.zhengsonglan.jobdemo.apps.start.MyReceiver
+ADDED from AndroidManifest.xml:33:9
+	android:enabled
+		ADDED from AndroidManifest.xml:35:13
+	android:exported
+		ADDED from AndroidManifest.xml:36:13
+	android:name
+		ADDED from AndroidManifest.xml:34:13
+intent-filter#android.intent.action.PACKAGE_ADDED+android.intent.action.PACKAGE_REMOVED+android.intent.action.PACKAGE_REPLACED
+ADDED from AndroidManifest.xml:37:13
+action#android.intent.action.PACKAGE_ADDED
+ADDED from AndroidManifest.xml:38:17
+	android:name
+		ADDED from AndroidManifest.xml:38:25
+action#android.intent.action.PACKAGE_REPLACED
+ADDED from AndroidManifest.xml:39:17
+	android:name
+		ADDED from AndroidManifest.xml:39:25
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from AndroidManifest.xml:40:17
+	android:name
+		ADDED from AndroidManifest.xml:40:25
+data
+ADDED from AndroidManifest.xml:41:17
+	android:scheme
+		ADDED from AndroidManifest.xml:41:23
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.0:15:5

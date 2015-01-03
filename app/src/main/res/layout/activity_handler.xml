@@ -3,9 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:gravity="center">
+    android:orientation="vertical">
 
-     <ImageView
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.采用Handler与线程的sleep(long)方法"
+            android:id="@+id/hanlder_bt_noe" />
+        </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.采用Handler的postDelayed(Runnable, long)方法"
+        android:id="@+id/hanlder_bt_two" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.采用Handler与timer及TimerTask结合的方法"
+        android:id="@+id/hanlder_bt_three" />
+
+    <ImageView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:id="@+id/handler_iv_show"
