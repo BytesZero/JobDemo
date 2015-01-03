@@ -12,13 +12,14 @@ import com.zhengsonglan.jobdemo.asynctask.AsynTaskActivity;
 import com.zhengsonglan.jobdemo.base.BaseActivity;
 import com.zhengsonglan.jobdemo.base.BaseActivityInterface;
 import com.zhengsonglan.jobdemo.handler.HandlerActivity;
+import com.zhengsonglan.jobdemo.strictmode.StrictModeActivity;
 
 /**
  * Created by zsl on 2014/12/31.
  */
 public class MainActivity extends BaseActivity implements BaseActivityInterface, View.OnClickListener {
 
-    Button bt_syncTask, bt_handler, bt_apps_start, bt_apps_share;
+    Button bt_syncTask, bt_handler, bt_apps_start, bt_apps_share,bt_strictMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity implements BaseActivityInterface,
         bt_handler = (Button) findViewById(R.id.main_bt_handler);
         bt_apps_start = (Button) findViewById(R.id.main_bt_apps_start);
         bt_apps_share= (Button) findViewById(R.id.main_bt_apps_share);
+        bt_strictMode= (Button) findViewById(R.id.main_bt_strictmode);
 
     }
 
@@ -44,6 +46,7 @@ public class MainActivity extends BaseActivity implements BaseActivityInterface,
         bt_handler.setOnClickListener(this);
         bt_apps_start.setOnClickListener(this);
         bt_apps_share.setOnClickListener(this);
+        bt_strictMode.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +74,11 @@ public class MainActivity extends BaseActivity implements BaseActivityInterface,
             }
             case R.id.main_bt_apps_share: {
                 Intent intent = new Intent(this, ShareActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.main_bt_strictmode: {
+                Intent intent = new Intent(this, StrictModeActivity.class);
                 startActivity(intent);
                 break;
             }

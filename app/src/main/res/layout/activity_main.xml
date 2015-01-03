@@ -35,6 +35,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/main_bt_apps_share"
                 android:text="系统分享" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_bt_strictmode"
+                android:text="StrictMode的使用" />
 
 
         </LinearLayout>

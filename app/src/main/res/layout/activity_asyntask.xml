@@ -21,8 +21,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="异步加载图片"
-            android:id="@+id/asyntask_bt"
+            android:id="@+id/asyntask_bt_img"
             android:layout_gravity="bottom" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示加载进度"
+            android:id="@+id/asyntask_bt_dialog" />
     </LinearLayout>
 
     <ImageView
