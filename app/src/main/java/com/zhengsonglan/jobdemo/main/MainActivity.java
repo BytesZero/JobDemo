@@ -12,6 +12,7 @@ import com.zhengsonglan.jobdemo.asynctask.AsynTaskActivity;
 import com.zhengsonglan.jobdemo.base.BaseActivity;
 import com.zhengsonglan.jobdemo.base.BaseActivityInterface;
 import com.zhengsonglan.jobdemo.handler.HandlerActivity;
+import com.zhengsonglan.jobdemo.libs.androidasynchttp.AndroidAsyncHttpActivity;
 import com.zhengsonglan.jobdemo.strictmode.StrictModeActivity;
 
 /**
@@ -19,7 +20,7 @@ import com.zhengsonglan.jobdemo.strictmode.StrictModeActivity;
  */
 public class MainActivity extends BaseActivity implements BaseActivityInterface, View.OnClickListener {
 
-    Button bt_syncTask, bt_handler, bt_apps_start, bt_apps_share,bt_strictMode;
+    Button bt_syncTask, bt_handler, bt_apps_start, bt_apps_share,bt_strictMode,bt_android_async_http;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class MainActivity extends BaseActivity implements BaseActivityInterface,
         bt_apps_start = (Button) findViewById(R.id.main_bt_apps_start);
         bt_apps_share= (Button) findViewById(R.id.main_bt_apps_share);
         bt_strictMode= (Button) findViewById(R.id.main_bt_strictmode);
+        bt_android_async_http= (Button) findViewById(R.id.main_bt_android_async_http);
 
     }
 
@@ -47,6 +49,7 @@ public class MainActivity extends BaseActivity implements BaseActivityInterface,
         bt_apps_start.setOnClickListener(this);
         bt_apps_share.setOnClickListener(this);
         bt_strictMode.setOnClickListener(this);
+        bt_android_async_http.setOnClickListener(this);
     }
 
     @Override
@@ -79,6 +82,12 @@ public class MainActivity extends BaseActivity implements BaseActivityInterface,
             }
             case R.id.main_bt_strictmode: {
                 Intent intent = new Intent(this, StrictModeActivity.class);
+                startActivity(intent);
+                break;
+            }
+
+            case R.id.main_bt_android_async_http: {
+                Intent intent = new Intent(this, AndroidAsyncHttpActivity.class);
                 startActivity(intent);
                 break;
             }
