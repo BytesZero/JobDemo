@@ -31,6 +31,8 @@
         <activity android:name=".apps.share.ShareActivity" />
         //StrictMode
         <activity android:name=".strictmode.StrictModeActivity" />
+        //AndroidAsyncHttp
+        <activity android:name=".libs.androidasynchttp.AndroidAsyncHttpActivity" />
         //自定义的广播：用来监听程序的安装、卸载、更新
         <receiver
             android:name=".apps.start.MyReceiver"

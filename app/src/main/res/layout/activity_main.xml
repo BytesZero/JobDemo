@@ -44,7 +44,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/main_bt_android-async-http"
+                android:id="@+id/main_bt_android_async_http"
                 android:text="android-async-http的使用" />
 
 
