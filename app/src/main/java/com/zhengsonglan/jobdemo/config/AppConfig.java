@@ -8,8 +8,13 @@ import android.os.StrictMode;
  * Created by Administrator on 2015/1/3.
  */
 public class AppConfig {
-    //开启检测模式
+
+    //开启严苛模式
     public static final boolean DEVELOPER_MODE=true;
+
+    /**
+     * 严苛模式的工具方法
+     */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static void setDeveloperMode(){
         if (DEVELOPER_MODE) {
