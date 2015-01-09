@@ -14,5 +14,16 @@
         android:layout_height="wrap_content"
         android:text="简单的请求2"
         android:id="@+id/androidasynchttp_bt_basehttp2" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="post请求"
+        android:id="@+id/androidasynchttp_bt_basehttp3" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上传文件"
+        android:id="@+id/androidasynchttp_bt_basehttp4" />
+
 
 </LinearLayout>
